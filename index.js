@@ -11,5 +11,5 @@ function onConnection(socket){
   socket.on('drawing', (data) => socket.broadcast.emit('drawing', data));
 }
 
-const port = 8080 || process.env.port;
+const port = process.env.PORT || 8000 ;
 server.listen(port, () => console.log(`server is running on port ${port}`));
